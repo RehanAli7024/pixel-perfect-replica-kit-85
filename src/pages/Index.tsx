@@ -11,11 +11,19 @@ const Index: React.FC = () => {
         <Header />
         <main>
           <div className="text-white text-center mt-20">
-            <h1 className="text-[64px] font-medium leading-none tracking-[-1.92px] max-md:text-[40px]">
-              Pick your plan
+            <h1 className="text-[56px] font-bold tracking-[-1.8px] leading-[77px] pt-4 pb-[7px] px-[70px] max-md:max-w-full max-md:text-[40px] max-md:leading-[62px] max-md:px-5">
+              Unleash the power of
+              <br />
+              AI Job Application
             </h1>
-            <p className="text-base font-normal leading-loose tracking-[-0.16px] mt-[29px]">
-              No hidden fees, 100% secure payment, cancel anytime
+            <p className="text-lg font-medium leading-8 mt-6 max-md:max-w-full">
+              Say goodbye to the outdated financial tools. Every small business
+              owner,
+              <br />
+              regardless of the background, can now manage their business like a
+              pro.
+              <br />
+              Simple. Intuitive. And never boring.
             </p>
           </div>
           <ComingSoon />
