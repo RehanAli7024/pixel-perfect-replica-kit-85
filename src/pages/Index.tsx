@@ -6,13 +6,15 @@ import ComingSoon from "@/components/ComingSoon";
 
 const Index: React.FC = () => {
   return (
-    <div className="relative bg-black flex flex-col items-center min-h-screen">
-      {/* Blue light rays background effect */}
-      <div className="absolute top-0 left-0 w-full h-[400px] bg-[radial-gradient(ellipse_at_top,rgba(0,111,255,0.15),transparent_50%)] pointer-events-none" />
-      <div className="absolute top-[-10%] left-[20%] w-[200px] h-[600px] rotate-[30deg] bg-[linear-gradient(180deg,rgba(0,111,255,0.15),transparent)] blur-[50px]" />
-      <div className="absolute top-[-10%] left-[40%] w-[200px] h-[600px] rotate-[30deg] bg-[linear-gradient(180deg,rgba(0,111,255,0.15),transparent)] blur-[50px]" />
-      <div className="absolute top-[-10%] left-[60%] w-[200px] h-[600px] rotate-[30deg] bg-[linear-gradient(180deg,rgba(0,111,255,0.15),transparent)] blur-[50px]" />
-      
+    <div 
+      className="relative bg-black flex flex-col items-center min-h-screen" 
+      style={{
+        backgroundImage: 'url(/lovable-uploads/ce9138b4-c2cc-452b-b15b-505b95aed045.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <div className="self-stretch w-full max-md:max-w-full relative z-10">
         <Header />
         <main>
