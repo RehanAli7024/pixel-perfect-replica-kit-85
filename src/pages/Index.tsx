@@ -1,11 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/sections/HeroSection";
+import TrustedBySection from "@/components/sections/TrustedBySection";
+import FeaturesSection from "@/components/sections/FeaturesSection";
+import ATSScoreSection from "@/components/sections/ATSScoreSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import PricingSection from "@/components/sections/PricingSection";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="bg-black flex flex-col items-center">
+      <div className="self-stretch w-full max-md:max-w-full">
+        <Header />
+        <HeroSection />
+        <TrustedBySection />
+        <FeaturesSection />
+        <ATSScoreSection />
+        <TestimonialsSection />
+        <PricingSection />
+        <Footer />
       </div>
     </div>
   );
