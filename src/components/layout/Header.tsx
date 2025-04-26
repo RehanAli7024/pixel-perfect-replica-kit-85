@@ -8,11 +8,16 @@ const Header: React.FC = () => {
       aria-label="Main navigation"
     >
       <div className="self-stretch z-10 flex w-full max-w-6xl gap-5 text-base text-white tracking-[-0.16px] leading-loose flex-wrap justify-between pt-8 pb-12 px-4 md:px-6 mx-auto max-md:max-w-full max-md:px-5">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/4ada7a2ed1f244abb01b61d3e4e21db0/eea9f21a41014b13acb324820f1d5b25003166f8?placeholderIfAbsent=true"
-          alt="Company Logo"
-          className="aspect-[3.18] object-contain w-[118px] shrink-0 max-w-full"
-        />
+        <div className="flex items-center gap-1">
+          <img
+            src="/logo.png"
+            alt="Company Logo"
+            className="aspect-[3.18] object-contain w-[118px] shrink-0 max-w-full"
+          />
+          <div className="text-xl font-bold text-white tracking-tight">
+            ApplyBee AI
+          </div>
+        </div>
         <nav className="flex items-stretch gap-6 md:gap-10 font-normal mt-3">
           <a href="#about" className="hover:text-blue-400 transition-colors">
             About Us

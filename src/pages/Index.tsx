@@ -26,9 +26,10 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative">
+      {/* Background section with image */}
       <div 
-        className="absolute inset-0 bg-black"
+        className="absolute top-0 left-0 right-0 h-[700px]"
         style={{
           backgroundImage: backgroundLoaded 
             ? 'url(/BackgroundImage.png)' 
@@ -36,20 +37,20 @@ const Index: React.FC = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          opacity: backgroundLoaded ? 1 : 0,
-          transition: 'opacity 0.3s ease-in-out'
+          zIndex: -1
         }}
       />
-      <div className="relative z-10 flex flex-col min-h-screen">
+
+      <div className="relative z-10">
         <Header />
-        <div className="flex-grow">
+        
+        <div className="relative">
           <main>
-            <div className="text-white text-center mt-20">
+            <div className="text-white text-center mt-20 relative z-10">
               <h1 className="text-[56px] font-bold tracking-[-1.8px] leading-[77px] pt-4 pb-[7px] px-[70px] max-md:max-w-full max-md:text-[40px] max-md:leading-[62px] max-md:px-5">
-                Unleash the power of
+                Take a Nap while we apply 
                 <br />
-                AI Job Application
+                for your job
               </h1>
               <p className="text-lg font-medium leading-8 mt-6 max-md:max-w-full">
                 Say goodbye to the outdated financial tools. Every small business
@@ -61,10 +62,20 @@ const Index: React.FC = () => {
                 Simple. Intuitive. And never boring.
               </p>
             </div>
-            <ComingSoon />
+
+            {/* Features section with margin and black background */}
+            <div className="bg-black py-20 mt-20">
+              <img 
+                src="/Features.png" 
+                alt="Features" 
+                className="mx-auto max-w-full"
+              />
+              <ComingSoon />
+            </div>
           </main>
         </div>
-        <Footer />
+
+        <Footer className="bg-black" />
       </div>
     </div>
   );
