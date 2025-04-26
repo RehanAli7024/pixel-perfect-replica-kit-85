@@ -61,10 +61,15 @@ const Index: React.FC = () => {
                 <br />
                 Simple. Intuitive. And never boring.
               </p>
+              <img 
+                src="Searchbar.png" 
+                alt="Searchbar" 
+                className="mx-auto max-w-full mt-10"
+              />
             </div>
 
             {/* Features section with margin and black background */}
-            <div className="bg-black py-20 mt-20">
+            <div className="bg-[#000000] py-20 mt-20">
               <img 
                 src="/Features.png" 
                 alt="Features" 
@@ -75,7 +80,7 @@ const Index: React.FC = () => {
           </main>
         </div>
 
-        <Footer className="bg-black" />
+        <Footer className="bg-[#000000]" />
       </div>
     </div>
   );
