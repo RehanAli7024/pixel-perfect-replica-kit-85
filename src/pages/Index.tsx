@@ -1,46 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ComingSoon from "@/components/ComingSoon";
+import SearchBar from "@/components/ui/SearchBar";
+import { OverlayShadow } from "@/components/layout/OverlayShadow";
+import './Index.css'
+import FeaturesSection from "@/components/layout/features";
+import FAQ from "@/components/layout/FAQ";
+import StandoutComparison from "@/components/layout/Standout";
+import Dashboard from "@/components/layout/Dashboard";
 
 const Index: React.FC = () => {
-  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
-
-  useEffect(() => {
-    // Comprehensive background image debugging
-    const img = new Image();
-    img.src = '/BackgroundImage.png';
-    img.onload = () => {
-      console.log('Background image loaded successfully');
-      console.log('Image details:', {
-        width: img.width,
-        height: img.height,
-        src: img.src
-      });
-      setBackgroundLoaded(true);
-    };
-    img.onerror = (error) => {
-      console.error('Failed to load background image', error);
-      console.log('Image source:', img.src);
-    };
-  }, []);
-
   return (
-    <div className="relative">
-      {/* Background section with image */}
-      <div 
-        className="absolute top-0 left-0 right-0 h-[700px]"
-        style={{
-          backgroundImage: backgroundLoaded 
-            ? 'url(/BackgroundImage.png)' 
-            : 'none',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          zIndex: -1
-        }}
-      />
-
+    <div className="bg-black min-h-screen relative">
+      <div className="glow-animation"></div>
+      
       <div className="relative z-10">
         <Header />
         
@@ -61,22 +35,16 @@ const Index: React.FC = () => {
                 <br />
                 Simple. Intuitive. And never boring.
               </p>
-              <img 
-                src="Searchbar.png" 
-                alt="Searchbar" 
-                className="mx-auto max-w-full mt-10"
-              />
             </div>
-
+            <div className="flex justify-center mt-10">
+              <OverlayShadow/>
+            </div>
+            <Dashboard/>
+            <FeaturesSection/>
+            <FAQ/>
+            <StandoutComparison/>
             {/* Features section with margin and black background */}
-            <div className="bg-[#000000] py-20 mt-20">
-              <img 
-                src="/Features.png" 
-                alt="Features" 
-                className="mx-auto max-w-full"
-              />
-              <ComingSoon />
-            </div>
+            <ComingSoon />
           </main>
         </div>
 
