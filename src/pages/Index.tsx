@@ -48,7 +48,7 @@ const Index: React.FC = () => {
           </main>
         </div>
 
-        <Footer className="bg-[#000000]" />
+        <Footer  />
       </div>
     </div>
   );
