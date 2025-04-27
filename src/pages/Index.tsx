@@ -5,7 +5,7 @@ import ComingSoon from "@/components/ComingSoon";
 import SearchBar from "@/components/ui/SearchBar";
 import { OverlayShadow } from "@/components/layout/OverlayShadow";
 import './Index.css'
-import FeaturesSection from "@/components/layout/features";
+import FeaturesSection from "@/components/layout/Features";
 import FAQ from "@/components/layout/FAQ";
 import StandoutComparison from "@/components/layout/Standout";
 import Dashboard from "@/components/layout/Dashboard";
